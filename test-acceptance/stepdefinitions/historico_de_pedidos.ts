@@ -52,7 +52,7 @@ defineSupportCode(function ({ Given, When, Then, Before, setDefaultTimeout }) {
     async () => {
       expect($("input[name='calendar']").isPresent()).to.eventually.equal(true);
       await $("input[name='calendar']").click();
-      await element(by.cssContainingText('.mat-calendar-body-today', 'APR')).click();   
+      await element(by.cssContainingText('.mat-calendar-body-cell-content', 'APR')).click();   
       await expect($("div[name='week']").isDisplayed()).to.eventually.equal(true)
       await expect($("button[name='0']").isDisplayed()).to.eventually.equal(true);
       await $("button[name='0']").click();
@@ -66,7 +66,7 @@ defineSupportCode(function ({ Given, When, Then, Before, setDefaultTimeout }) {
       browser.waitForAngular();
       expect($("input[name='calendar']").isPresent()).to.eventually.equal(true);
       await $("input[name='calendar']").click();
-      await element(by.cssContainingText('.mat-calendar-body-today', 'APR')).click();   
+      await element(by.cssContainingText('.mat-calendar-body-cell-content', 'APR')).click();   
       await expect($("div[name='week']").isDisplayed()).to.eventually.equal(true)
       await expect($("button[name='0']").isDisplayed()).to.eventually.equal(true);
     }
